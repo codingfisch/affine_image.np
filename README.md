@@ -1,7 +1,7 @@
 # affine_image.np
 
 Affine transformations on (currently only 3D, maybe later 2D) arrays via NumPy, intended to be
-- an **alternative** to [`F.affine_grid`](https://pytorch.org/docs/stable/generated/torch.nn.functional.affine_grid.html), [`F.grid_sample`](https://pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html) or [`scipy.ndimage.affine_transform`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.affine_transform.html) (with [caveats]())
+- an **alternative** to [`F.affine_grid`](https://pytorch.org/docs/stable/generated/torch.nn.functional.affine_grid.html), [`F.grid_sample`](https://pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html) or [`scipy.ndimage.affine_transform`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.affine_transform.html) (with [caveats](https://github.com/codingfisch/affine_image.np?tab=readme-ov-file#compatibility-))
 - used as **pseudocode** since it is **<100 lines of code** -> easy to port into other array frameworks
 
 🛠️ Install via: `pip install affine-image`
@@ -128,8 +128,9 @@ Compared to `torch` and `scipy`, `affine-image` runs at ~25% the speed for trili
 `affine_grid_3d` is compatible with `F.affine_grid` (meaning their respective outputs match) 🎉
 
 Besides that, the outputs of `affine-image` currently slightly differ from the outputs of `torch` and `scipy`.
-For `nearest=True` (especially with `align_corners=True`) `affine-image` almost matches `torch`.
+For `nearest=True` (especially with `align_corners=True`) `affine-image` almost matches `torch`:
 
-The test script offers 
-<span style="color:green">color</span><span style="color:yellow">ful</span> <span style="color:red">prints</span> 
-and customizable .png outputs to visualize remaining mismatches. Contributions (see Issues) are much appreciated 🤗
+![issue1](https://github.com/user-attachments/assets/26653dcc-149a-4830-87c0-475367deb5a2)
+
+The test script offers plots (like the one above) and colorful terminal output to chase the remaining mismatches.
+Contributions (see [Issues](https://github.com/codingfisch/affine_image.np/issues)) are much appreciated 🤗
