@@ -6,7 +6,7 @@ from unittest import TestCase
 from scipy.ndimage import affine_transform
 from affine_image.image_3d import PADDINGS, affine_grid_3d, sample_nearest_3d, sample_linear_3d, affine_transform_3d
 ASSERT_MARGIN = .2
-SAVE_IMAGE = 'mesh'  # NOTE TO CONTRIBUTOR: Pick either None, 'brain', 'shape' or 'mesh'
+SAVE_IMAGE = None  # NOTE TO CONTRIBUTOR: Pick either None, 'brain', 'shape' or 'mesh'
 SAVE_AFFINE_KEY = 'translation'  # NOTE TO CONTRIBUTOR: Pick either 'identity', 'translation', 'zoom' or 'all'
 CMAPS = ('gray', 'gist_ncar')  # NOTE TO CONTRIBUTOR: Pick matplotlib colormap for visualization
 # DO NOT TOUCH GLOBALS AFTER THIS LINE TO ENABLE VALID COMPARISON TO MAIN VERSION MEAN ABSOLUTE ERROR (MAE)
