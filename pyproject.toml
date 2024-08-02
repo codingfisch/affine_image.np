@@ -5,7 +5,7 @@ description = 'Pure NumPy implementation of affine image transformations'
 authors = ['codingfisch <l_fisc17@wwu.de>']
 license = 'MIT'
 readme = 'README.md'
-repository = 'https://github.com/codingfisch/affine_image.np
+repository = 'https://github.com/codingfisch/affine_image.np'
 classifiers = [
     'Programming Language :: Python :: 3',
     'Operating System :: OS Independent',
